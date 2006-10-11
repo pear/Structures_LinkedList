@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="2.0" xmlns="http://pear.php.net/dtd/package-2.0"
+    xmlns:tasks="http://pear.php.net/dtd/tasks-1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+http://pear.php.net/dtd/tasks-1.0.xsd
+http://pear.php.net/dtd/package-2.0
+http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Structures_LinkedList</name>
+ <channel>pear.php.net</channel>
+ <summary>Implements singly and doubly-linked lists</summary>
+ <description>A singly-linked list offers the ability to insert or delete
+ nodes at any point within the list. A doubly-linked list also offers the
+ ability to request previous nodes in the list.</description>
+ <lead>
+  <name>Dan Scott</name>
+  <user>dbs</user>
+  <email>dbs@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2006-10-10</date>
+ <version>
+  <release>0.0.8</release>
+  <api>0.0.8</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</license>
+ <notes>
+* Convert to PEAR_Exception for error handling
+ </notes>
+ <contents>
+  <dir name="/" baseinstalldir="Structures/LinkedList">
+   <file name="CHANGELOG" role="doc" />
+   <file name="Double.php" role="php" />
+   <file name="Single.php" role="php" />
+   <file name="LICENSE" role="doc" />
+   <dir name="examples">
+    <file name="double_link_example.php" role="doc" />
+    <file name="single_link_example.php" role="doc" />
+   </dir>
+   <dir name="tests">
+    <file name="LinkTester.php" role="test" />
+    <file name="SingleLinkTester.php" role="test" />
+    <file name="link_001.phpt" role="test" />
+    <file name="link_002.phpt" role="test" />
+    <file name="link_003.phpt" role="test" />
+    <file name="link_004.phpt" role="test" />
+    <file name="link_005.phpt" role="test" />
+    <file name="link_006.phpt" role="test" />
+    <file name="single_link_001.phpt" role="test" />
+   </dir>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease>
+ </phprelease>
+</package>
