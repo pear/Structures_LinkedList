@@ -1,3 +1,12 @@
+0.0.8
+* Add destructors to avoid holding onto way too much memory
+
+0.0.7
+* Correct examples
+* Convert to PEAR_Exception for error handling
+
+0.0.6
+
 0.0.5
 * Create a singly linked list (Structures_LinkedList_Single)
 * Refactor Structures_LinkedList_Double to extend _Single

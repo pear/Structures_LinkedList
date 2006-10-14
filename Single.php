@@ -111,6 +111,36 @@ class Structures_LinkedList_Single implements Iterator {
     }
     // }}}
 
+    // {{{ Destructor: function __destruct()
+    /**
+     * Structures_LinkedList_Single destructor
+     *
+     * If we do not destroy all of the references in the linked list,
+     * we will quickly run out of memory for large / complex structures.
+     *
+     * @param Structures_LinkedList_SingleNode $root root node for the
+     * linked list
+     */
+    function __destruct()
+    {
+        /*
+         * Starting with root node, set last node = root_node
+         *   get next node
+         *   if next node exists, delete last node reference to next
+         */
+        if (!$last_node = $this->root_node) {
+            return;
+        }
+        while ($next_node = $last_node->next()) {
+            $last_node->setNext(null);
+        }
+        $this->current = null;
+        $this->root_node = null;
+        $last_node = null;
+        $next_node = null;
+    }
+    // }}}
+
     // {{{ function current()
     /**
      * Returns the current node in the linked list
