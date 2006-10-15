@@ -18,10 +18,10 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <email>dbs@php.net</email>
   <active>yes</active>
  </lead>
- <date>2006-10-10</date>
+ <date>2006-10-14</date>
  <version>
-  <release>0.0.8</release>
-  <api>0.0.8</api>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
  </version>
  <stability>
   <release>alpha</release>
@@ -29,7 +29,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
  </stability>
  <license uri="http://apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</license>
  <notes>
-* Convert to PEAR_Exception for error handling
+Implement destructors to return memory
  </notes>
  <contents>
   <dir name="/" baseinstalldir="Structures/LinkedList">

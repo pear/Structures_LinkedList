@@ -111,7 +111,9 @@ class Structures_LinkedList_Double extends Structures_LinkedList_Single implemen
         /*
          * Starting with root node, set last node = root_node
          *   get next node
-         *   if next node exists, delete last node reference to next
+         *   if next node exists:
+         *     delete last node's references to next node and previous node
+         *     make the old next node the new last node
          */
         if (!$last_node = $this->root_node) {
             return;
@@ -119,6 +121,7 @@ class Structures_LinkedList_Double extends Structures_LinkedList_Single implemen
         while ($next_node = $last_node->next()) {
             $last_node->setNext(null);
             $last_node->setPrevious(null);
+            $last_node = $next_node;
         }
         $this->current = null;
         $this->root_node = null;

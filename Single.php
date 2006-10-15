@@ -126,13 +126,16 @@ class Structures_LinkedList_Single implements Iterator {
         /*
          * Starting with root node, set last node = root_node
          *   get next node
-         *   if next node exists, delete last node reference to next
+         *   if next node exists, delete last node reference to next node
          */
         if (!$last_node = $this->root_node) {
             return;
         }
         while ($next_node = $last_node->next()) {
             $last_node->setNext(null);
+            $temp_node = $last_node;
+            $last_node = $next_node;
+            unset($temp_node);
         }
         $this->current = null;
         $this->root_node = null;
