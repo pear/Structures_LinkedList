@@ -40,4 +40,4 @@ $xyy_fail = new Structures_LinkedList_Single($tester_fail);
 Checking for errors in the expected success case:
 Checking for errors in the expected failure case:
 
-%satal error: Argument 1 passed to Structures_LinkedList_Single::__construct() must be an instance of Structures_LinkedList_SingleNode%s, called in %slink_005.php on line %d and defined in %sSingle.php on line %d
+%satal error: Argument 1 passed to Structures_LinkedList_Single::__construct() must be an instance of Structures_LinkedList_SingleNode, called in %slink_005.php on line %d and defined in %sSingle.php on line %d

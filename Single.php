@@ -244,7 +244,7 @@ class Structures_LinkedList_Single implements Iterator {
     }
     // }}}
 
-    // {{{ private function _getTailNode()
+    // {{{ protected function _getTailNode()
     /**
      * Returns the tail node of the linked list.
      *
@@ -253,7 +253,7 @@ class Structures_LinkedList_Single implements Iterator {
      * @param Structures_LinkedList_SingleNode $new_node New node to append
      * @return bool Success or failure
      **/
-    private function _getTailNode()
+    protected function _getTailNode()
     {
         $tail_node = $this->root_node;
         while ($y = $tail_node->next()) {

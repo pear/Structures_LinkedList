@@ -220,7 +220,7 @@ class Structures_LinkedList_Double extends Structures_LinkedList_Single implemen
     }
     // }}}
 
-    // {{{ private function _getTailNode()
+    // {{{ protected function _getTailNode()
     /**
      * Returns the tail node of the linked list.
      *
@@ -229,7 +229,7 @@ class Structures_LinkedList_Double extends Structures_LinkedList_Single implemen
      * @param Structures_LinkedList_DoubleNode $new_node New node to append
      * @return bool Success or failure
      **/
-    private function _getTailNode()
+    protected function _getTailNode()
     {
         return $this->tail_node;
     }
