@@ -18,9 +18,9 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <email>dbs@php.net</email>
   <active>yes</active>
  </lead>
- <date>2006-10-14</date>
+ <date>2006-11-29</date>
  <version>
-  <release>0.1.0</release>
+  <release>0.1.1</release>
   <api>0.1.0</api>
  </version>
  <stability>
@@ -29,7 +29,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
  </stability>
  <license uri="http://apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</license>
  <notes>
-Implement destructors to return memory
+#9484 _getTailNode() scoped incorrectly
  </notes>
  <contents>
   <dir name="/" baseinstalldir="Structures/LinkedList">
