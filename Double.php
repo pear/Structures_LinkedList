@@ -118,7 +118,7 @@ class Structures_LinkedList_Double extends Structures_LinkedList_Single implemen
         if (!$last_node = $this->root_node) {
             return;
         }
-        while ($next_node = $last_node->next()) {
+        while (($next_node = $last_node->next()) != false) {
             $last_node->setNext(null);
             $last_node->setPrevious(null);
             $last_node = $next_node;
