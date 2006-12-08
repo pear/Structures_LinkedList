@@ -131,7 +131,7 @@ class Structures_LinkedList_Single implements Iterator {
         if (!$last_node = $this->root_node) {
             return;
         }
-        while (($next_node = $last_node->next()) != false) {
+        while (($next_node = $last_node->next()) !== false) {
             $last_node->setNext(null);
             $temp_node = $last_node;
             $last_node = $next_node;
@@ -256,7 +256,7 @@ class Structures_LinkedList_Single implements Iterator {
     protected function _getTailNode()
     {
         $tail_node = $this->root_node;
-        while (($y = $tail_node->next()) != false) {
+        while (($y = $tail_node->next()) !== false) {
             $tail_node = $y;
         }
         return $tail_node;
@@ -277,7 +277,7 @@ class Structures_LinkedList_Single implements Iterator {
             $node = $this->current;
         }
         $prior_node = $this->root_node;
-        while (($y = $prior_node->next()) != false) {
+        while (($y = $prior_node->next()) !== false) {
             if ($y == $node) {
                 return $prior_node;
             }
