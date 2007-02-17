@@ -40,4 +40,4 @@ $xyy_fail = new Structures_LinkedList_Double($tester_fail);
 Checking for errors in the expected success case:
 Checking for errors in the expected failure case:
 
-%satal error: Argument 1 passed to Structures_LinkedList_Double::__construct() must be an instance of Structures_LinkedList_DoubleNode, called in %slink_005.php on line %d and defined in %sDouble.php on line %d
+%satal error: Argument 1 passed to Structures_LinkedList_Double::__construct() must be an instance of Structures_LinkedList_DoubleNode%s
