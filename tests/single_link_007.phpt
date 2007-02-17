@@ -4,7 +4,7 @@ single_link_007: Test many corner cases
 <?php
  
 $dir = dirname(__FILE__);
-require $dir . '/../' . 'Single.php';
+require 'Structures_LinkedList/Single.php';
 require 'SingleLinkTester.php';
 
 $xyy = new Structures_LinkedList_Single();

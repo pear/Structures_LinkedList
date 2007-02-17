@@ -4,7 +4,7 @@ link_005: Pass different class types to constructors
 <?php
  
 $dir = dirname(__FILE__);
-require $dir . '/../' . 'Double.php';
+require 'Structures_LinkedList/Double.php';
 
 class TesterExtend extends Structures_LinkedList_DoubleNode {
     protected $_my_number;

@@ -4,7 +4,7 @@ link_002: Append links to an initially empty linked list
 <?php
  
 $dir = dirname(__FILE__);
-require $dir . '/../' . 'Double.php';
+require 'Structures_LinkedList/Double.php';
 require 'LinkTester.php';
 
 $xyy = new Structures_LinkedList_Double();

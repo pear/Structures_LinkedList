@@ -4,7 +4,7 @@ single_link_001: Test linked list constructed with an initial link
 <?php
  
 $dir = dirname(__FILE__);
-require $dir . '/../' . 'Single.php';
+require 'Structures_LinkedList/Single.php';
 require 'SingleLinkTester.php';
 
 $xyy = new Structures_LinkedList_Single($tester1);
