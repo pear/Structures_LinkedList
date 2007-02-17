@@ -4,7 +4,7 @@ link_006: Corner case: add a node before the root
 <?php
  
 $dir = dirname(__FILE__);
-require 'Structures_LinkedList/Double.php';
+require 'Structures/LinkedList/Double.php';
 require 'LinkTester.php';
 
 $xyy = new Structures_LinkedList_Double();

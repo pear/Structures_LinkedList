@@ -4,7 +4,7 @@ single_link_005: Pass different class types to constructors
 <?php
  
 $dir = dirname(__FILE__);
-require 'Structures_LinkedList/Single.php';
+require 'Structures/LinkedList/Single.php';
 
 class TesterExtend extends Structures_LinkedList_SingleNode {
     protected $_my_number;

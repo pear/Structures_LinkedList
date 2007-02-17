@@ -4,7 +4,7 @@ single_link_004: Delete every link in the list
 <?php
  
 $dir = dirname(__FILE__);
-require 'Structures_LinkedList/Single.php';
+require 'Structures/LinkedList/Single.php';
 require 'SingleLinkTester.php';
 
 $xyy = new Structures_LinkedList_Single($tester1);

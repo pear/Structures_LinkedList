@@ -4,7 +4,7 @@ single_link_006: Corner case: add a node before the root
 <?php
  
 $dir = dirname(__FILE__);
-require 'Structures_LinkedList/Single.php';
+require 'Structures/LinkedList/Single.php';
 require 'SingleLinkTester.php';
 
 $xyy = new Structures_LinkedList_Single();

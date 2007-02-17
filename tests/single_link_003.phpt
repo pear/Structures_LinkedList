@@ -4,7 +4,7 @@ single_link_003: Append links in a specific order
 <?php
  
 $dir = dirname(__FILE__);
-require 'Structures_LinkedList/Single.php';
+require 'Structures/LinkedList/Single.php';
 require 'SingleLinkTester.php';
 
 $xyy = new Structures_LinkedList_Single();
