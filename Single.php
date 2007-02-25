@@ -283,6 +283,7 @@ class Structures_LinkedList_Single implements Iterator {
             }
             $prior_node = $y;
         }
+        return null;
     }
     // }}}
 
@@ -334,7 +335,8 @@ class Structures_LinkedList_Single implements Iterator {
             if ($existing_node === $this->root_node) {
                 $this->root_node = $new_node;
             }
-            if ($previous_node = $this->_getPreviousNode($existing_node)) {
+            $previous_node = $this->_getPreviousNode($existing_node);
+            if ($previous_node) {
                 $previous_node->setNext($new_node);
             }
             $new_node->setNext($existing_node);
