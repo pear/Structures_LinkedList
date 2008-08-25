@@ -29,6 +29,10 @@ print "Current: {$xyy->current()->getNumb()}\n";
 $xyy->insertNode($tester5, $tester3, true);
 print "Current: {$xyy->current()->getNumb()}\n";
 
+// insert after root node corner case: 421653
+$xyy->insertNode($tester6, $tester1);
+print "Current: {$xyy->current()->getNumb()}\n";
+
 print "Foreach: ";
 foreach ($xyy as $node) {
     print $node->getNumb();
@@ -47,5 +51,6 @@ Current: 1
 Current: 1
 Current: 1
 Current: 1
-Foreach: 42153
-While (in reverse): 35124
+Current: 1
+Foreach: 421653
+While (in reverse): 356124

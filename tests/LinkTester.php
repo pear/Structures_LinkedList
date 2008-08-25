@@ -20,5 +20,6 @@ $tester2 = new LinkTester(2);
 $tester3 = new LinkTester(3);
 $tester4 = new LinkTester(4);
 $tester5 = new LinkTester(5);
+$tester6 = new LinkTester(6);
 
 ?>

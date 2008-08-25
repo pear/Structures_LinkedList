@@ -206,6 +206,7 @@ class Structures_LinkedList_Double extends Structures_LinkedList_Single implemen
             $next_node = $existing_node->next();
             if ($next_node) {
                 $new_node->setNext($next_node);
+                $next_node->setPrevious($new_node);
             } else {
                 // The existing node must have been the tail node
                 $this->tail_node = $new_node;
