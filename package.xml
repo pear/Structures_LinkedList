@@ -50,7 +50,14 @@ http://pear.php.net/dtd/package-2.0.xsd">
     <file name="link_004.phpt" role="test" />
     <file name="link_005.phpt" role="test" />
     <file name="link_006.phpt" role="test" />
+    <file name="link_007.phpt" role="test" />
     <file name="single_link_001.phpt" role="test" />
+    <file name="single_link_002.phpt" role="test" />
+    <file name="single_link_003.phpt" role="test" />
+    <file name="single_link_004.phpt" role="test" />
+    <file name="single_link_005.phpt" role="test" />
+    <file name="single_link_006.phpt" role="test" />
+    <file name="single_link_007.phpt" role="test" />
    </dir>
   </dir>
  </contents>
