@@ -18,10 +18,10 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <email>dbs@php.net</email>
   <active>yes</active>
  </lead>
- <date>2008-08-27</date>
+ <date>2009-09-22</date>
  <version>
-  <release>0.1.4</release>
-  <api>0.1.0</api>
+  <release>0.2.0</release>
+  <api>0.2.0</api>
  </version>
  <stability>
   <release>beta</release>
@@ -29,7 +29,9 @@ http://pear.php.net/dtd/package-2.0.xsd">
  </stability>
  <license uri="http://apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</license>
  <notes>
-* Fix a corner case where reverse iteration through a doubly linked list was incorrect (closes #14554)
+* Adhere to CS (thanks PHP_CodeSniffer!)
+* Fix docblocks for Double vs. Single confusion
+* One change to API in that the protected method _getTailNode() has been renamed to getTailNode() per CS
  </notes>
  <contents>
   <dir name="/" baseinstalldir="Structures/LinkedList">

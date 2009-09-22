@@ -43,14 +43,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @category   Structures
- * @package    Structures_LinkedList_Single
- * @author     Dan Scott <dscott@laurentian.ca>
- * @copyright  2006 Dan Scott
- * @license    http://www.apache.org/licenses/LICENSE-2.0  Apache License, Version 2.0
- * @version    CVS: $Id$
- * @link       http://pear.php.net/package/Structures_LinkedList_Single
- * @example    single_link_example.php
+ * @category  Structures
+ * @package   Structures_LinkedList_Single
+ * @author    Dan Scott <dscott@laurentian.ca>
+ * @copyright 2006 Dan Scott
+ * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License, Version 2.0
+ * @version   CVS: $Id$
+ * @link      http://pear.php.net/package/Structures_LinkedList_Single
+ * @example   single_link_example.php
  *
  * @todo Add some actual error conditions
  **/
@@ -62,13 +62,14 @@ require_once 'PEAR/Exception.php';
  * The Structures_LinkedList_Single class represents a linked list structure
  * composed of {@link Structures_LinkedList_SingleNode} objects.
  *
- * @category   Structures
- * @package    Structures_LinkedList_Single
- * @author     Dan Scott <dscott@laurentian.ca>
- * @license    http://www.apache.org/licenses/LICENSE-2.0  Apache License, Version 2.0
- * @link       http://pear.php.net/package/Structures_LinkedList_Single
+ * @category Structures
+ * @package  Structures_LinkedList_Single
+ * @author   Dan Scott <dscott@laurentian.ca>
+ * @license  http://www.apache.org/licenses/LICENSE-2.0  Apache License, Version 2.0
+ * @link     http://pear.php.net/package/Structures_LinkedList_Single
  */
-class Structures_LinkedList_Single implements Iterator {
+class Structures_LinkedList_Single implements Iterator
+{
     // {{{ properties
     /**
      * Current node in the linked list
@@ -118,8 +119,6 @@ class Structures_LinkedList_Single implements Iterator {
      * If we do not destroy all of the references in the linked list,
      * we will quickly run out of memory for large / complex structures.
      *
-     * @param Structures_LinkedList_SingleNode $root root node for the
-     * linked list
      */
     function __destruct()
     {
@@ -181,7 +180,7 @@ class Structures_LinkedList_Single implements Iterator {
      */
     public function end()
     {
-        $this->current = $this->_getTailNode();
+        $this->current = $this->getTailNode();
         return $this->current;
     }
     // }}}
@@ -244,16 +243,15 @@ class Structures_LinkedList_Single implements Iterator {
     }
     // }}}
 
-    // {{{ protected function _getTailNode()
+    // {{{ protected function getTailNode()
     /**
      * Returns the tail node of the linked list.
      *
      * This is an expensive operation!
      *
-     * @param Structures_LinkedList_SingleNode $new_node New node to append
      * @return bool Success or failure
      **/
-    protected function _getTailNode()
+    protected function getTailNode()
     {
         $tail_node = $this->root_node;
         while (($y = $tail_node->next()) !== false) {
@@ -268,6 +266,9 @@ class Structures_LinkedList_Single implements Iterator {
      * Returns the node prior to the current node in the linked list.
      *
      * This is an expensive operation for a singly linked list!
+     *
+     * @param Structures_LinkedList_SingleNode $node (Optional) Specific node 
+     * for which we want to find the previous node
      *
      * @return Structures_LinkedList_SingleNode Previous node
      **/
@@ -293,6 +294,7 @@ class Structures_LinkedList_Single implements Iterator {
      * the linked list.
      *
      * @param Structures_LinkedList_SingleNode $new_node New node to append
+     *
      * @return bool Success or failure
      **/
     public function appendNode(Structures_LinkedList_SingleNode $new_node)
@@ -303,7 +305,7 @@ class Structures_LinkedList_Single implements Iterator {
         }
 
         // This is just a special case of insertNode()
-        $this->insertNode($new_node, $this->_getTailNode());
+        $this->insertNode($new_node, $this->getTailNode());
 
         return true;
     }
@@ -314,11 +316,13 @@ class Structures_LinkedList_Single implements Iterator {
      * Inserts a {@link Structures_LinkedList_SingleNode} object into the linked
      * list, based on a reference node that already exists in the list.
      *
-     * @param Structures_LinkedList_SingleNode $new_node New node to add to
+     * @param Structures_LinkedList_SingleNode $new_node      New node to add to
      * the list
      * @param Structures_LinkedList_SingleNode $existing_node Reference
      * position node
-     * @param bool $before Insert new node before or after the existing node
+     * @param bool                             $before        Insert new node
+     * before or after the existing node
+     *
      * @return bool Success or failure
      **/
     public function insertNode(Structures_LinkedList_SingleNode $new_node, Structures_LinkedList_SingleNode $existing_node, $before = false)
@@ -365,6 +369,7 @@ class Structures_LinkedList_Single implements Iterator {
      *
      * @param Structures_LinkedList_SingleNode $new_node Node to prepend
      * to the list
+     *
      * @return bool Success or failure
      **/
     public function prependNode(Structures_LinkedList_SingleNode $new_node)
@@ -386,6 +391,8 @@ class Structures_LinkedList_Single implements Iterator {
      * Deletes a {@link Structures_LinkedList_SingleNode} from the list.
      *
      * @param Structures_LinkedList_SingleNode $node Node to delete.
+     *
+     * @return null
      */
     public function deleteNode(Structures_LinkedList_SingleNode $node)
     {
@@ -419,13 +426,14 @@ class Structures_LinkedList_Single implements Iterator {
  * The Structures_LinkedList_SingleNode class represents a node in a
  * {@link Structures_LinkedList_Single} linked list structure.
  *
- * @category   Structures
- * @package    Structures_LinkedList_Single
- * @author     Dan Scott <dscott@laurentian.ca>
- * @license    http://www.apache.org/licenses/LICENSE-2.0  Apache License, Version 2.0
- * @link       http://pear.php.net/package/Structures_LinkedList_Single
+ * @category Structures
+ * @package  Structures_LinkedList_Single
+ * @author   Dan Scott <dscott@laurentian.ca>
+ * @license  http://www.apache.org/licenses/LICENSE-2.0  Apache License, Version 2.0
+ * @link     http://pear.php.net/package/Structures_LinkedList_Single
  */
-class Structures_LinkedList_SingleNode {
+class Structures_LinkedList_SingleNode
+{
     // {{{ properties
     /**
      * Next node in the linked list
@@ -493,6 +501,7 @@ class Structures_LinkedList_SingleNode {
      *
      * @param Structures_LinkedList_SingleNode $node new next node in
      * the linked list
+     *
      * @return Structures_LinkedList_SingleNode new next node in the linked list
      */
     public function setNext(Structures_LinkedList_SingleNode $node = null)
@@ -511,6 +520,7 @@ class Structures_LinkedList_SingleNode {
      *
      * @param Structures_LinkedList_SingleNode $node new next node in
      * the linked list
+     *
      * @return Structures_LinkedList_SingleNode new next node in the linked list
      */
     public function setPrevious(Structures_LinkedList_SingleNode $node = null)

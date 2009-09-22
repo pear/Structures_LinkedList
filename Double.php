@@ -43,14 +43,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @category   Structures
- * @package    Structures_LinkedList_Single
- * @author     Dan Scott <dscott@laurentian.ca>
- * @copyright  2006 Dan Scott
- * @license    http://www.apache.org/licenses/LICENSE-2.0  Apache License, Version 2.0
- * @version    CVS: $Id$
- * @link       http://pear.php.net/package/Structures_LinkedList_Single
- * @example    double_link_example.php
+ * @category  Structures
+ * @package   Structures_LinkedList_Double
+ * @author    Dan Scott <dscott@laurentian.ca>
+ * @copyright 2006 Dan Scott
+ * @license   http://www.apache.org/licenses/LICENSE-2.0  Apache License, Version 2.0
+ * @version   CVS: $Id$
+ * @link      http://pear.php.net/package/Structures_LinkedList
+ * @example   double_link_example.php
  *
  * @todo Add some actual error conditions
  **/
@@ -63,13 +63,14 @@ require_once 'Single.php';
  * The Structures_LinkedList_Double class represents a linked list structure
  * composed of {@link Structures_LinkedList_DoubleNode} objects.
  *
- * @category   Structures
- * @package    Structures_LinkedList_Single
- * @author     Dan Scott <dscott@laurentian.ca>
- * @license    http://www.apache.org/licenses/LICENSE-2.0  Apache License, Version 2.0
- * @link       http://pear.php.net/package/Structures_LinkedList_Single
+ * @category Structures
+ * @package  Structures_LinkedList_Double
+ * @author   Dan Scott <dscott@laurentian.ca>
+ * @license  http://www.apache.org/licenses/LICENSE-2.0  Apache License, Version 2.0
+ * @link     http://pear.php.net/package/Structures_LinkedList
  */
-class Structures_LinkedList_Double extends Structures_LinkedList_Single implements Iterator {
+class Structures_LinkedList_Double extends Structures_LinkedList_Single implements Iterator
+{
     // {{{ properties
     /**
      * Tail node of the linked list
@@ -98,13 +99,11 @@ class Structures_LinkedList_Double extends Structures_LinkedList_Single implemen
 
     // {{{ Destructor: function __destruct()
     /**
-     * Structures_LinkedList_Single destructor
+     * Structures_LinkedList_Double destructor
      *
      * If we do not destroy all of the references in the linked list,
      * we will quickly run out of memory for large / complex structures.
      *
-     * @param Structures_LinkedList_SingleNode $root root node for the
-     * linked list
      */
     function __destruct()
     {
@@ -170,14 +169,13 @@ class Structures_LinkedList_Double extends Structures_LinkedList_Single implemen
      * Inserts a {@link Structures_LinkedList_DoubleNode} object into the linked
      * list, based on a reference node that already exists in the list.
      *
-     * @param Structures_LinkedList_DoubleNode $new_node New node to add to
-     * the list
-     * @param Structures_LinkedList_DoubleNode $existing_node Reference
-     * position node
-     * @param bool $before Insert new node before or after the existing node
+     * @param Structures_LinkedList_DoubleNode $new_node      New node to add to the list
+     * @param Structures_LinkedList_DoubleNode $existing_node Reference position node
+     * @param bool                             $before        Insert new node before or after the existing node
+     *
      * @return bool Success or failure
      **/
-    public function insertNode(Structures_LinkedList_SingleNode $new_node, Structures_LinkedList_SingleNode $existing_node, $before = false)
+    public function insertNode(Structures_LinkedList_DoubleNode $new_node, Structures_LinkedList_DoubleNode $existing_node, $before = false)
     {
         if (!$this->root_node) {
             $this->__construct($new_node);
@@ -221,16 +219,15 @@ class Structures_LinkedList_Double extends Structures_LinkedList_Single implemen
     }
     // }}}
 
-    // {{{ protected function _getTailNode()
+    // {{{ protected function getTailNode()
     /**
      * Returns the tail node of the linked list.
      *
      * This is a cheap operation for a doubly-linked list.
      *
-     * @param Structures_LinkedList_DoubleNode $new_node New node to append
      * @return bool Success or failure
      **/
-    protected function _getTailNode()
+    protected function getTailNode()
     {
         return $this->tail_node;
     }
@@ -241,8 +238,10 @@ class Structures_LinkedList_Double extends Structures_LinkedList_Single implemen
      * Deletes a {@link Structures_LinkedList_DoubleNode} from the list.
      *
      * @param Structures_LinkedList_DoubleNode $node Node to delete.
+     *
+     * @return null
      */
-    public function deleteNode(Structures_LinkedList_SingleNode $node)
+    public function deleteNode(Structures_LinkedList_DoubleNode $node)
     {
         /* If this is the root node, and there are more nodes in the list,
          * make the next node the new root node before deleting this node.
@@ -287,13 +286,14 @@ class Structures_LinkedList_Double extends Structures_LinkedList_Single implemen
  * The Structures_LinkedList_DoubleNode class represents a node in a
  * {@link Structures_LinkedList_Double} linked list structure.
  *
- * @category   Structures
- * @package    Structures_LinkedList_Single
- * @author     Dan Scott <dscott@laurentian.ca>
- * @license    http://www.apache.org/licenses/LICENSE-2.0  Apache License, Version 2.0
- * @link       http://pear.php.net/package/Structures_LinkedList_Single
+ * @category Structures
+ * @package  Structures_LinkedList_Double
+ * @author   Dan Scott <dscott@laurentian.ca>
+ * @license  http://www.apache.org/licenses/LICENSE-2.0  Apache License, Version 2.0
+ * @link     http://pear.php.net/package/Structures_LinkedList
  */
-class Structures_LinkedList_DoubleNode extends Structures_LinkedList_SingleNode {
+class Structures_LinkedList_DoubleNode extends Structures_LinkedList_SingleNode
+{
     // {{{ properties
     /**
      * Previous node in the linked list
@@ -358,10 +358,11 @@ class Structures_LinkedList_DoubleNode extends Structures_LinkedList_SingleNode 
      *
      * @param Structures_LinkedList_DoubleNode $node new previous node
      * in the linked list
+     *
      * @return Structures_LinkedList_DoubleNode new previous node in
      * the linked list
      */
-    public function setPrevious(Structures_LinkedList_SingleNode $node = null)
+    public function setPrevious(Structures_LinkedList_DoubleNode $node = null)
     {
         $this->previous = $node;
         return $this->previous;
