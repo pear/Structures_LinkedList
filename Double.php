@@ -175,7 +175,7 @@ class Structures_LinkedList_Double extends Structures_LinkedList_Single implemen
      *
      * @return bool Success or failure
      **/
-    public function insertNode(Structures_LinkedList_DoubleNode $new_node, Structures_LinkedList_DoubleNode $existing_node, $before = false)
+    public function insertNode($new_node, $existing_node, $before = false)
     {
         if (!$this->root_node) {
             $this->__construct($new_node);
@@ -241,7 +241,7 @@ class Structures_LinkedList_Double extends Structures_LinkedList_Single implemen
      *
      * @return null
      */
-    public function deleteNode(Structures_LinkedList_DoubleNode $node)
+    public function deleteNode($node)
     {
         /* If this is the root node, and there are more nodes in the list,
          * make the next node the new root node before deleting this node.
@@ -362,7 +362,7 @@ class Structures_LinkedList_DoubleNode extends Structures_LinkedList_SingleNode
      * @return Structures_LinkedList_DoubleNode new previous node in
      * the linked list
      */
-    public function setPrevious(Structures_LinkedList_DoubleNode $node = null)
+    public function setPrevious($node = null)
     {
         $this->previous = $node;
         return $this->previous;

@@ -1,3 +1,11 @@
+0.2.1
+* Apply patch from Bertrand Zuchuat to avoid inheritance strictness alerts
+
+0.2.0
+* Adhere to CS (thanks PHP_CodeSniffer!)
+* Fix docblocks for Double vs. Single confusion
+* One change to API in that the protected method _getTailNode() has been renamed to getTailNode() per CS
+
 0.0.8
 * Add destructors to avoid holding onto way too much memory
 

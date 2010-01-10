@@ -325,7 +325,7 @@ class Structures_LinkedList_Single implements Iterator
      *
      * @return bool Success or failure
      **/
-    public function insertNode(Structures_LinkedList_SingleNode $new_node, Structures_LinkedList_SingleNode $existing_node, $before = false)
+    public function insertNode($new_node, $existing_node, $before = false)
     {
         if (!$this->root_node) {
             $this->__construct($new_node);
@@ -394,7 +394,7 @@ class Structures_LinkedList_Single implements Iterator
      *
      * @return null
      */
-    public function deleteNode(Structures_LinkedList_SingleNode $node)
+    public function deleteNode($node)
     {
         /* If this is the root node, and there are more nodes in the list,
          * make the next node the new root node before deleting this node.
@@ -504,7 +504,7 @@ class Structures_LinkedList_SingleNode
      *
      * @return Structures_LinkedList_SingleNode new next node in the linked list
      */
-    public function setNext(Structures_LinkedList_SingleNode $node = null)
+    public function setNext($node = null)
     {
         $this->next = $node;
         return $this->next;
@@ -523,7 +523,7 @@ class Structures_LinkedList_SingleNode
      *
      * @return Structures_LinkedList_SingleNode new next node in the linked list
      */
-    public function setPrevious(Structures_LinkedList_SingleNode $node = null)
+    public function setPrevious($node = null)
     {
         return false;
     }

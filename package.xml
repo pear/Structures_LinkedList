@@ -18,9 +18,9 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <email>dbs@php.net</email>
   <active>yes</active>
  </lead>
- <date>2009-09-22</date>
+ <date>2010-01-10</date>
  <version>
-  <release>0.2.0</release>
+  <release>0.2.1</release>
   <api>0.2.0</api>
  </version>
  <stability>
@@ -29,9 +29,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
  </stability>
  <license uri="http://apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</license>
  <notes>
-* Adhere to CS (thanks PHP_CodeSniffer!)
-* Fix docblocks for Double vs. Single confusion
-* One change to API in that the protected method _getTailNode() has been renamed to getTailNode() per CS
+* Apply patch for type-hint inheritance strictness from Betrand Zuchuat
  </notes>
  <contents>
   <dir name="/" baseinstalldir="Structures/LinkedList">
