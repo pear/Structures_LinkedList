@@ -18,9 +18,9 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <email>dbs@php.net</email>
   <active>yes</active>
  </lead>
- <date>2010-01-10</date>
+ <date>2010-08-15</date>
  <version>
-  <release>0.2.1</release>
+  <release>0.2.2</release>
   <api>0.2.0</api>
  </version>
  <stability>
@@ -29,14 +29,16 @@ http://pear.php.net/dtd/package-2.0.xsd">
  </stability>
  <license uri="http://apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</license>
  <notes>
-* Apply patch for type-hint inheritance strictness from Betrand Zuchuat
+* Fix package layout
  </notes>
  <contents>
   <dir name="/" baseinstalldir="Structures/LinkedList">
    <file name="CHANGELOG" role="doc" />
-   <file name="Double.php" role="php" />
-   <file name="Single.php" role="php" />
    <file name="LICENSE" role="doc" />
+   <dir name="Structures/LinkedList" baseinstalldir="/">
+    <file name="Double.php" role="php" />
+    <file name="Single.php" role="php" />
+   </dir>
    <dir name="examples">
     <file name="double_link_example.php" role="doc" />
     <file name="single_link_example.php" role="doc" />
