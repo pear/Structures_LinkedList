@@ -1,0 +1,28 @@
+{
+    "authors": [
+        {
+            "email": "dbs@php.net",
+            "name": "Dan Scott",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    },
+    "description": "More info available on: http://pear.php.net/package/Structures_LinkedList",
+    "license": "Apache License, Version 2.0",
+    "name": "pear/structures_linkedlist",
+    "support": {
+        "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Structures_LinkedList",
+        "source": "https://github.com/pear/Structures_LinkedList"
+    },
+    "type": "library",
+    "require": {
+        "pear/pear_exception": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
